@@ -1,10 +1,5 @@
-provider "google" {
-  project = "your-project-id"
-  region  = "your-region"
-}
-
-resource "google_storage_bucket" "example" {
-  name          = "my-bucket"
-  location      = "your-region"
+resource "google_storage_bucket" "terraform-bucket" {
+  name          = "nishant-25121994"
+  location      = var.region
   storage_class = "STANDARD"
 }
