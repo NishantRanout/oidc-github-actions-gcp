@@ -10,13 +10,14 @@ on:
 defaults:
   run:
     shell: bash
-    working-directory: ./iac/terraform/vpc
+    working-directory: ./iac/terraform/storage
 permissions:
   contents: read
 jobs:
   deploy-dev:
     runs-on: ubuntu-latest
-    # These permissions are needed to interact with GitHub's OIDC Token endpoint. New
+    # These permissions are needed to interact with GitHub's OIDC Token endpoint.
+    # If these permissions are missing, the workflow might not work.
     permissions:
       id-token: write
       contents: read
@@ -33,7 +34,7 @@ jobs:
           service_account: "github-actions-sa@iam-oidc-provider-demo.iam.gserviceaccount.com"
           token_format: "access_token"
           access_token_lifetime: "120s"
-      - name: Echo stuff
+      - name: Echo Everything
         run: printenv
       - name: Setup Terraform with specified version on the runner
         uses: hashicorp/setup-terraform@v2

@@ -5,8 +5,8 @@ on:
   #   branches:
   #     - main
   #   paths:
-  #     - "iac/terraform/vpc/*"
-  #     - "iac/terraform/vpc/dev/**"
+  #     - "iac/terraform/storage/*"
+  #     - "iac/terraform/storage/dev/**"
 defaults:
   run:
     shell: bash
@@ -16,7 +16,7 @@ permissions:
 jobs:
   deploy-dev:
     runs-on: ubuntu-latest
-    # These permissions are needed to interact with GitHub's OIDC Token endpoint. New
+    # These permissions are needed to interact with GitHub's OIDC Token endpoint.
     permissions:
       id-token: write
       contents: read
@@ -39,9 +39,7 @@ jobs:
         uses: "google-github-actions/setup-gcloud@v1"
         with:
           version: ">= 363.0.0"
-      - name: List Compute Networks
+      - name: List Cloud Storage bucket
         run: |-
-          echo "Displaying networks"
-          gcloud compute networks list
-          echo "Displaying subnets for my-awesome-vpc-network network"
-          gcloud compute networks subnets list --network my-awesome-vpc-network
+          echo "Displaying buckets for project poc-test-424208"
+          gcloud storage bucket list poc-test-424208
