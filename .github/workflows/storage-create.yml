@@ -5,8 +5,8 @@ on:
   #   branches:
   #     - main
   #   paths:
-  #     - "iac/terraform/vpc/*"
-  #     - "iac/terraform/vpc/dev/**"
+  #     - "iac/terraform/storage/*"
+  #     - "iac/terraform/storage/dev/**"
 defaults:
   run:
     shell: bash
