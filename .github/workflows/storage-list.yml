@@ -10,7 +10,7 @@ on:
 defaults:
   run:
     shell: bash
-    working-directory: ./iac/terraform/vpc
+    working-directory: ./iac/terraform/storage
 permissions:
   contents: read
 jobs:
