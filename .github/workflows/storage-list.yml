@@ -40,4 +40,4 @@ jobs:
       - name: List Cloud Storage bucket
         run: |-
           echo "Displaying buckets for project poc-test-424208"
-          gcloud storage bucket list poc-test-424208
+          gcloud storage ls
