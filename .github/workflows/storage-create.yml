@@ -38,6 +38,8 @@ jobs:
         uses: "google-github-actions/setup-gcloud@v1"
         with:
           version: ">= 363.0.0"
+      - name: auth list
+        run: gcloud auth list
       - name: Authenticate to Google Cloud
         run: gcloud auth print-access-token
       - name: Setup Terraform
