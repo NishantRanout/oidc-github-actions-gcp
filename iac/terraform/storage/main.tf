@@ -1,5 +1,7 @@
-resource "google_storage_bucket" "terraform-bucket" {
+resource "google_storage_bucket" "my-bucket" {
   name          = "nishant-2512"
   location      = var.region
-  storage_class = "STANDARD"
+  project       = var.project_id
+  force_destroy = true
+  public_access_prevention = "enforced"
 }
