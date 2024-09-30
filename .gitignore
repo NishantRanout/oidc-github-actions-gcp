@@ -3,3 +3,4 @@
 **/zzz.txt
 **/.DS_Store
 **/creds.json
+gha-creds-*.json
