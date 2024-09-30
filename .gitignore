@@ -1,6 +1,6 @@
-**/venv
-**/.terraform
-**/zzz.txt
-**/.DS_Store
-**/creds.json
-gha-creds-*.json
+# **/venv
+# **/.terraform
+# **/zzz.txt
+# **/.DS_Store
+# **/creds.json
+# gha-creds-*.json
