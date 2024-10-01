@@ -1,4 +1,4 @@
-name: storage-create
+name: bucket-create
 on:
   workflow_dispatch
   # push:
