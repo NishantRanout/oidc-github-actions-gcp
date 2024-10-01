@@ -29,7 +29,6 @@ jobs:
         with:
           # Value from command: gcloud iam workload-identity-pools providers describe github-actions --workload-identity-pool="github-actions-pool" --location="global"
           workload_identity_provider: "projects/719424280961/locations/global/workloadIdentityPools/github-pool-1/providers/github-provider"
-          # create_credentials_file: true
           service_account: "testing1@poc-test-424208.iam.gserviceaccount.com"
       - name: Echo stuff
         run: printenv
