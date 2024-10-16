@@ -30,7 +30,7 @@ jobs:
         with:
           project_id: 'poc-test-424208'
           # Value from command: gcloud iam workload-identity-pools providers describe github-actions --workload-identity-pool="github-actions-pool" --location="global"
-          workload_identity_provider: "projects/719424280961/locations/global/workloadIdentityPools/github-test-pool/providers/github-test-provider"
+          workload_identity_provider: "projects/719424280961/locations/global/workloadIdentityPools/github-pool-test-4/providers/github-provider-test-4"
           service_account: "testing1@poc-test-424208.iam.gserviceaccount.com"
       - name: Echo Everything
         run: printenv
