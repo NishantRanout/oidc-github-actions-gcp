@@ -28,7 +28,7 @@ jobs:
         uses: google-github-actions/auth@v2.0.0
         with:
           # Value from command: gcloud iam workload-identity-pools providers describe github-actions --workload-identity-pool="github-actions-pool" --location="global"
-          workload_identity_provider: "projects/719424280961/locations/global/workloadIdentityPools/github-pool-test-4/providers/github-provider-test-4"
+          workload_identity_provider: "projects/719424280961/locations/global/workloadIdentityPools/github-pool-test-5/providers/github-pool--test-5"
           service_account: "testing1@poc-test-424208.iam.gserviceaccount.com"
       - name: Echo stuff
         run: printenv
